@@ -1,5 +1,5 @@
+import groovy.json.JsonSlurper 
 pipeline {
-
     stages {
         stage('Build') {
             steps {
