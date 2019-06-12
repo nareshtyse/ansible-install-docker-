@@ -1,0 +1,18 @@
+{
+    "DryRun": false,
+    "ImageId": "ami-0ebbf2179e615c338",
+    "InstanceType": "t2.micro",
+    "MaxCount": 1,
+    "MinCount": 1,
+    "Monitoring": {
+        "Enabled": true
+    },
+    "SecurityGroupIds": [
+        "sg-0339e2f12791f0760"
+    ],
+    "SecurityGroups": [
+        "launch-wizard-3"
+    ],
+    "DisableApiTermination": true,
+    "InstanceInitiatedShutdownBehavior": "stop"
+}
