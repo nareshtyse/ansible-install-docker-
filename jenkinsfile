@@ -4,8 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                cd /var/lib/jenkins/workspace/pipeline
-                ./sample.sh
+                echo 'Building..'
+                git credentialsId: 'fc9472f9-82ad-4281-ba17-78b55988ff9f', url: 'https://github.com/nareshtyse/ansible-install-docker-.git'
+                sh label: '', script: '''cd /var/lib/jenkins/workspace/pipeline
+                mkdir tysebitla
+                cd tysebitla
+                touch bitla.txt'''
             }
         }
         stage('Test') {
@@ -18,5 +22,7 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        
+        
     }
 }
